@@ -6,8 +6,6 @@ export default function ThemeToggle() {
   const { theme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  console.log(theme);
-
   //get the current theme
   const currentTheme = theme === "system" ? systemTheme : theme;
 

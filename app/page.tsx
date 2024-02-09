@@ -14,6 +14,7 @@ export default function Home() {
           height="0"
           alt="pixel logo"
           className="w-60 h-24"
+          priority
         />
         <HomeSearch />
       </div>
