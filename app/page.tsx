@@ -7,17 +7,19 @@ export default function Home() {
   return (
     <>
       <HomeHeader />
-      <div className="flex flex-col items-center mt-24 h-4">
-        <Image
-          src={logo}
-          width="0"
-          height="0"
-          alt="pixel logo"
-          className="w-60 h-24"
-          priority
-        />
-        <HomeSearch />
-      </div>
+      <main>
+        <div className="flex flex-col items-center mt-24 ">
+          <Image
+            src={logo}
+            width="0"
+            height="0"
+            alt="pixel logo"
+            className="w-60 h-24"
+            priority
+          />
+          <HomeSearch />
+        </div>
+      </main>
     </>
   );
 }

@@ -40,7 +40,7 @@ export default function HomeSearch() {
         />
         <BsFillMicFill className="text-lg" />
       </form>
-      <div className="flex flex-col space-y-2 sm:space-y-0 justify-center sm:flex-row mt-8 space-x-3">
+      <div className="flex flex-col space-y-2 sm:space-y-0 justify-center items-center sm:flex-row mt-8 gap-x-2">
         <button
           type="submit"
           onClick={handleSubmit}
