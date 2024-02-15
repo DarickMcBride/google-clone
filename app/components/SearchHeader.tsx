@@ -5,6 +5,7 @@ import SearchBox from "./SearchBox";
 import { RiSettings3Line } from "react-icons/ri";
 import { TbGridDots } from "react-icons/tb";
 import ThemeToggle from "./ThemeToggle";
+import SearchHeaderOptions from "./SearchHeaderOptions";
 
 export default function SearchHeader() {
   return (
@@ -29,6 +30,7 @@ export default function SearchHeader() {
           <button className="btn btn-sm btn-primary ml-2">Sign in</button>
         </div>
       </div>
+      <SearchHeaderOptions />
     </div>
   );
 }
