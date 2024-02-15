@@ -25,17 +25,22 @@ export default function HomeSearch() {
     router.push(`/search/web?searchTerm=${data[0]}`);
   };
 
+  //write a random word generator
+  
+
+
+
   return (
     <>
       <form
         className="flex w-full mt-5 mx-auto max-w-xl border fill border-neutral-content  px-5 py-3 
-      rounded-full hover:shadow-lg focus-within:shadow-lg transition-shadow lg:max-w-2xl"
+      rounded-full hover:shadow-lg focus-within:shadow-lg transition-shadow lg:max-w-2xl "
         onSubmit={handleSubmit}
       >
         <AiOutlineSearch className="text-xl text-gray-500 mr-3" />
         <input
           type="text"
-          className="flex-grow focus:outline-none bg-transparent"
+          className="flex-grow focus:outline-none bg-transparent "
           onChange={(e) => setSearch(e.target.value)}
         />
         <BsFillMicFill className="text-lg" />

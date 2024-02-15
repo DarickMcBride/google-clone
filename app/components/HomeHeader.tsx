@@ -13,7 +13,6 @@ export default function HomeHeader() {
           Images
         </Link>
         <TbGridDots className="bg-transparent hover:bg-gray-200 rounded-full text-4xl p-2" />
-        <ThemeToggle />
         <button className="btn btn-sm btn-primary">Sign in</button>
       </div>
     </header>

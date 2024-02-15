@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <HomeHeader />
       <main>
-        <div className="flex flex-col items-center mt-24 ">
+        <div className="flex flex-col items-center mt-24 mx-4">
           <Image
             src={logo}
             width="0"
@@ -17,7 +17,7 @@ export default function Home() {
             className="w-60 h-24"
             priority
           />
-          <HomeSearch />
+          <HomeSearch/>
         </div>
       </main>
     </>
