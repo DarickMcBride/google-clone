@@ -12,7 +12,7 @@ export default function ThemeToggle() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <label className="flex cursor-pointer gap-2">
+    <label className="flex cursor-pointer gap-1">
       <svg
         className={`${mounted && currentTheme === "light" && "text-primary"}`}
         xmlns="http://www.w3.org/2000/svg"
