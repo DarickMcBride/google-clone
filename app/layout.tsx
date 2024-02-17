@@ -4,7 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import Footer from "./components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "Pixel",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className="relative min-h-screen">
         <Providers>
           {children}
           <Footer />

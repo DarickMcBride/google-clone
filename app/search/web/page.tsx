@@ -1,10 +1,6 @@
+import WebSearchResults from "@/components/WebSearchResults";
 import Link from "next/link";
 
-//create an interface for result object
-interface Result {
-  title: string;
-  link: string;
-}
 
 export default async function WebSearchPage({
   searchParams,
@@ -32,12 +28,5 @@ export default async function WebSearchPage({
     );
   }
 
-  return (
-    <div>
-      {results &&
-        results.map((result: Result, id: number) => (
-          <h1 key={id}>{result?.title}</h1>
-        ))}
-    </div>
-  );
+  return <div>{results && <WebSearchResults results={data} />}</div>;
 }
