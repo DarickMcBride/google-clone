@@ -1,14 +1,16 @@
 
 import ImageSearchResults from "@/components/ImageSearchResults";
 import Link from "next/link";
+import { start } from "repl";
 
 export default async function ImageSearchPage({
   searchParams,
 }: {
-  searchParams: { searchTerm: string };
+  searchParams: { searchTerm: string, start: number};
 }) {
+  const startIndex = searchParams.start  || 1;
   const res = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image&start=${startIndex}`
   );
   if (!res.ok) {
     throw new Error("Failed to fetch");

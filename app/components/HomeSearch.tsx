@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-import { BsFillMicFill } from "react-icons/bs";
+
 import { useRouter } from "next/navigation";
 
 export default function HomeSearch() {
@@ -26,9 +26,6 @@ export default function HomeSearch() {
   };
 
   //write a random word generator
-  
-
-
 
   return (
     <>
@@ -43,7 +40,6 @@ export default function HomeSearch() {
           className="flex-grow focus:outline-none bg-transparent "
           onChange={(e) => setSearch(e.target.value)}
         />
-        <BsFillMicFill className="text-lg" />
       </form>
       <div className="flex flex-col space-y-2 sm:space-y-0 justify-center items-center sm:flex-row mt-8 gap-x-2">
         <button

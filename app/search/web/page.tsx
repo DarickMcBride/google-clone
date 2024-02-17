@@ -5,10 +5,11 @@ import Link from "next/link";
 export default async function WebSearchPage({
   searchParams,
 }: {
-  searchParams: { searchTerm: string };
+  searchParams: { searchTerm: string, start: number};
 }) {
+    const startIndex = searchParams.start || 1;
   const res = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&start=${startIndex}`
   );
   if (!res.ok) {
     throw new Error("Failed to fetch");

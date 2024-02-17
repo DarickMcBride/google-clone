@@ -3,7 +3,7 @@ export interface Result {
     title: string;
     link: string;
     formattedUrl: string;
-    htmlSnippet: HTMLElement;
+    htmlSnippet: string;
     displayLink: string;
     image: { contextLink: string };
   }[];
