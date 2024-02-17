@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
-import { BsFillMicFill } from "react-icons/bs";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useSearchParams, useRouter } from "next/navigation";
 
