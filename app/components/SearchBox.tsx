@@ -3,7 +3,6 @@ import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useSearchParams, useRouter } from "next/navigation";
-import { Suspense } from "react";
 
 export default function SearchBox() {
   const searchParams = useSearchParams();
@@ -23,14 +22,13 @@ export default function SearchBox() {
     py-3 ml-10 mr-5 flex-grow max-w-3xl items-center"
       onSubmit={handleSubmit}
     >
-      <Suspense fallback="...Loading">
-        <input
-          type="text"
-          value={search}
-          className="w-full bg-transparent focus:outline-none"
-          onChange={(e) => setSearch(e.target.value)}
-        />
-      </Suspense>
+      <input
+        type="text"
+        value={search}
+        className="w-full bg-transparent focus:outline-none"
+        onChange={(e) => setSearch(e.target.value)}
+      />
+
       <RxCross2
         className="text-2xl text-gray-500 cursor-pointer sm:mr-2"
         onClick={() => setSearch("")}

@@ -1,7 +1,6 @@
 "use client";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { AiOutlineSearch, AiOutlineCamera } from "react-icons/ai";
-import { Suspense } from "react";
 
 export default function SearchHeaderOptions() {
   const router = useRouter();
@@ -16,26 +15,24 @@ export default function SearchHeaderOptions() {
 
   return (
     <div className="flex space-x-2 select-none w-full justify-center lg:justify-start lg:pl-52 text-gray-700 text-sm">
-      <Suspense fallback="...Loading">
-        <div
-          className={`flex items-center space-x-1 border-b-4 border-transparent active:text-primary cursor-pointer pb-3 px-2 ${
-            pathname === "/search/web" && "!text-primary !border-primary"
-          }`}
-          onClick={() => selectTab("All")}
-        >
-          <AiOutlineSearch className="text-md" />
-          <p>All</p>
-        </div>
-        <div
-          className={`flex items-center space-x-1 border-b-4 border-transparent active:text-primary cursor-pointer pb-3 px-2 ${
-            pathname === "/search/image" && "!text-primary !border-primary"
-          }`}
-          onClick={() => selectTab("Images")}
-        >
-          <AiOutlineCamera className="text-md" />
-          <p>Images</p>
-        </div>
-      </Suspense>
+      <div
+        className={`flex items-center space-x-1 border-b-4 border-transparent active:text-primary cursor-pointer pb-3 px-2 ${
+          pathname === "/search/web" && "!text-primary !border-primary"
+        }`}
+        onClick={() => selectTab("All")}
+      >
+        <AiOutlineSearch className="text-md" />
+        <p>All</p>
+      </div>
+      <div
+        className={`flex items-center space-x-1 border-b-4 border-transparent active:text-primary cursor-pointer pb-3 px-2 ${
+          pathname === "/search/image" && "!text-primary !border-primary"
+        }`}
+        onClick={() => selectTab("Images")}
+      >
+        <AiOutlineCamera className="text-md" />
+        <p>Images</p>
+      </div>
     </div>
   );
 }
