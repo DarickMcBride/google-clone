@@ -2,8 +2,8 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function Footer() {
   return (
-    <footer className="footer absolute w-full bottom-0 bg-base-100 content-center">
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center  px-8 py-3 gap-x-20 w-full">
+    <footer className="footer absolute bottom-0 bg-base-100 ">
+      <div className="flex flex-col-reverse md:flex-row justify-between items-center px-8 py-3  w-full">
         <nav className="flex  gap-x-3">
           <a className="link link-hover">About</a>
           <a className="link link-hover">Advertising</a>

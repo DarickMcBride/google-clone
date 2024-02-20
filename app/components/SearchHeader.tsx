@@ -34,7 +34,7 @@ export default function SearchHeader() {
       </div>
       <Suspense fallback="...Loading">
         <SearchHeaderOptions />
-      </Suspense>s
+      </Suspense>
     </div>
   );
 }
